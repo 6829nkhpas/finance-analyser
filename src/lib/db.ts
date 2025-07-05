@@ -1,5 +1,15 @@
 import mongoose from 'mongoose';
 
+interface MongooseGlobal {
+  conn: typeof mongoose | null;
+  promise: Promise<typeof mongoose> | null;
+}
+
+declare global {
+  // eslint-disable-next-line no-var
+  var mongoose: MongooseGlobal;
+}
+
 const MONGODB_URI = process.env.MONGODB_URI!;
 
 if (!MONGODB_URI) {
@@ -22,9 +32,7 @@ async function dbConnect() {
       bufferCommands: false,
     };
 
-    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongooseInstance) => {
-      return mongooseInstance;
-    });
+    cached.promise = mongoose.connect(MONGODB_URI, opts);
   }
 
   try {

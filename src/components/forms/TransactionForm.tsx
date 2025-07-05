@@ -140,7 +140,9 @@ export default function TransactionForm({ onSuccess }: TransactionFormProps) {
           <div className="space-y-2">
             <Label htmlFor="category">Category</Label>
             <Select
-              onValueChange={(value) => setValue("category", value as any)}
+              onValueChange={(value: string) =>
+                setValue("category", value as any)
+              }
               defaultValue="Other"
             >
               <SelectTrigger>

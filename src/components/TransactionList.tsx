@@ -164,7 +164,9 @@ export default function TransactionList({
                               type="number"
                               step="0.01"
                               value={editingTransaction.amount}
-                              onChange={(e) =>
+                              onChange={(
+                                e: React.ChangeEvent<HTMLInputElement>
+                              ) =>
                                 setEditingTransaction({
                                   ...editingTransaction,
                                   amount: parseFloat(e.target.value) || 0,
@@ -180,7 +182,9 @@ export default function TransactionList({
                             <Input
                               id="edit-description"
                               value={editingTransaction.description}
-                              onChange={(e) =>
+                              onChange={(
+                                e: React.ChangeEvent<HTMLInputElement>
+                              ) =>
                                 setEditingTransaction({
                                   ...editingTransaction,
                                   description: e.target.value,
@@ -193,7 +197,7 @@ export default function TransactionList({
                             <Label htmlFor="edit-category">Category</Label>
                             <Select
                               value={editingTransaction.category}
-                              onValueChange={(value) =>
+                              onValueChange={(value: string) =>
                                 setEditingTransaction({
                                   ...editingTransaction,
                                   category: value,
@@ -219,7 +223,9 @@ export default function TransactionList({
                               id="edit-date"
                               type="date"
                               value={editingTransaction.date.split("T")[0]}
-                              onChange={(e) =>
+                              onChange={(
+                                e: React.ChangeEvent<HTMLInputElement>
+                              ) =>
                                 setEditingTransaction({
                                   ...editingTransaction,
                                   date: e.target.value,

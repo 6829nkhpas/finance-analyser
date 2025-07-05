@@ -102,7 +102,9 @@ export default function BudgetForm({ onSuccess }: BudgetFormProps) {
           <div className="space-y-2">
             <Label htmlFor="category">Category</Label>
             <Select
-              onValueChange={(value) => setValue("category", value as any)}
+              onValueChange={(value: string) =>
+                setValue("category", value as any)
+              }
               defaultValue="Food"
             >
               <SelectTrigger>
