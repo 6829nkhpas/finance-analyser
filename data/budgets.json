@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "1701234567890budget1",
+    "category": "Food",
+    "amount": 400,
+    "month": "2024-12",
+    "createdAt": "2024-12-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "_id": "1701234567891budget2",
+    "category": "Rent",
+    "amount": 1200,
+    "month": "2024-12",
+    "createdAt": "2024-12-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "_id": "1701234567892budget3",
+    "category": "Bills",
+    "amount": 300,
+    "month": "2024-12",
+    "createdAt": "2024-12-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "_id": "1701234567893budget4",
+    "category": "Shopping",
+    "amount": 200,
+    "month": "2024-12",
+    "createdAt": "2024-12-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "_id": "1701234567894budget5",
+    "category": "Travel",
+    "amount": 150,
+    "month": "2024-12",
+    "createdAt": "2024-12-01T00:00:00Z",
+    "updatedAt": "2024-12-01T00:00:00Z"
+  }
+]
