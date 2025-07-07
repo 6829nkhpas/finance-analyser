@@ -28,8 +28,8 @@ export async function POST(request: NextRequest) {
     });
     
     return NextResponse.json(budget, { status: 201 });
-  } catch (error: any) {
-    if (error.message === 'Budget for this category and month already exists') {
+  } catch (error: unknown) {
+    if (error instanceof Error && error.message === 'Budget for this category and month already exists') {
       return NextResponse.json({ error: 'Budget for this category and month already exists' }, { status: 400 });
     }
     console.error('Error creating budget:', error);

@@ -60,10 +60,18 @@ export default function BudgetComparisonChart({
     difference: (actualSpending[budget.category] || 0) - budget.amount,
   }));
 
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const CustomTooltip = ({
+    active,
+    payload,
+    label,
+  }: {
+    active?: boolean;
+    payload?: Array<{ dataKey: string; value: number }>;
+    label?: string;
+  }) => {
     if (active && payload && payload.length) {
-      const budget = payload.find((p: any) => p.dataKey === "budget");
-      const actual = payload.find((p: any) => p.dataKey === "actual");
+      const budget = payload.find((p) => p.dataKey === "budget");
+      const actual = payload.find((p) => p.dataKey === "actual");
 
       return (
         <div className="bg-background border rounded-lg p-3 shadow-lg">

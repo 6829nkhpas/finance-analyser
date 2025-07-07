@@ -7,11 +7,8 @@ import TransactionList from "@/components/TransactionList";
 import SummaryCards from "@/components/SummaryCards";
 import MonthlyExpensesChart from "@/components/charts/MonthlyExpensesChart";
 import CategoryPieChart from "@/components/charts/CategoryPieChart";
-import { Loader2 } from "lucide-react";
-
 export default function DashboardPage() {
-  const { transactions, budgets, setTransactions, setBudgets } =
-    useFinanceStore();
+  const { transactions, setTransactions, setBudgets } = useFinanceStore();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -50,7 +47,13 @@ export default function DashboardPage() {
             <div className="w-16 h-16 border-4 border-primary/20 rounded-full animate-spin">
               <div className="absolute top-0 left-0 w-16 h-16 border-4 border-transparent border-t-primary rounded-full animate-spin" />
             </div>
-            <div className="absolute inset-0 w-16 h-16 border-4 border-transparent border-r-primary/60 rounded-full animate-spin" style={{animationDirection: 'reverse', animationDuration: '1.5s'}} />
+            <div
+              className="absolute inset-0 w-16 h-16 border-4 border-transparent border-r-primary/60 rounded-full animate-spin"
+              style={{
+                animationDirection: "reverse",
+                animationDuration: "1.5s",
+              }}
+            />
           </div>
           <div className="text-center space-y-2">
             <p className="text-lg font-medium gradient-text">
@@ -61,9 +64,18 @@ export default function DashboardPage() {
             </p>
           </div>
           <div className="flex gap-1">
-            <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0ms'}} />
-            <div className="w-2 h-2 bg-primary/70 rounded-full animate-bounce" style={{animationDelay: '150ms'}} />
-            <div className="w-2 h-2 bg-primary/40 rounded-full animate-bounce" style={{animationDelay: '300ms'}} />
+            <div
+              className="w-2 h-2 bg-primary rounded-full animate-bounce"
+              style={{ animationDelay: "0ms" }}
+            />
+            <div
+              className="w-2 h-2 bg-primary/70 rounded-full animate-bounce"
+              style={{ animationDelay: "150ms" }}
+            />
+            <div
+              className="w-2 h-2 bg-primary/40 rounded-full animate-bounce"
+              style={{ animationDelay: "300ms" }}
+            />
           </div>
         </div>
       </div>
@@ -75,7 +87,7 @@ export default function DashboardPage() {
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl -z-10" />
       <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-pink-200/30 to-blue-200/30 rounded-full blur-3xl -z-10" />
-      
+
       {/* Header */}
       <div className="text-center space-y-4 relative">
         <div className="inline-block p-4 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 shadow-xl float mb-4">
@@ -85,7 +97,8 @@ export default function DashboardPage() {
           Personal Finance Visualizer
         </h1>
         <p className="text-gray-600 text-xl max-w-2xl mx-auto">
-          Track your expenses, set budgets, and visualize your financial health with beautiful insights
+          Track your expenses, set budgets, and visualize your financial health
+          with beautiful insights
         </p>
         <div className="flex justify-center gap-2 mt-6">
           <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full" />
