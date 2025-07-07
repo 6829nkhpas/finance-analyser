@@ -45,7 +45,13 @@ export default function CategoryPieChart({
     .filter((item) => item.value > 0)
     .sort((a, b) => b.value - a.value);
 
-  const CustomTooltip = ({ active, payload }: any) => {
+  const CustomTooltip = ({
+    active,
+    payload,
+  }: {
+    active?: boolean;
+    payload?: Array<{ name: string; value: number; color: string }>;
+  }) => {
     if (active && payload && payload.length) {
       const data = payload[0];
       const percentage = (
@@ -68,9 +74,13 @@ export default function CategoryPieChart({
     return null;
   };
 
-  const CustomLegend = ({ payload }: any) => (
+  const CustomLegend = ({
+    payload,
+  }: {
+    payload?: Array<{ value: string; color: string }>;
+  }) => (
     <div className="flex flex-wrap gap-2 mt-4">
-      {payload?.map((entry: any, index: number) => (
+      {payload?.map((entry, index: number) => (
         <div key={index} className="flex items-center gap-2 text-sm">
           <div
             className="w-3 h-3 rounded-full"

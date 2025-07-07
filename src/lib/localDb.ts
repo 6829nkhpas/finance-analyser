@@ -47,7 +47,7 @@ export function getTransactions(): Transaction[] {
   try {
     const data = fs.readFileSync(TRANSACTIONS_FILE, 'utf8');
     return JSON.parse(data);
-  } catch (error) {
+  } catch {
     return [];
   }
 }
@@ -97,7 +97,7 @@ export function getBudgets(): Budget[] {
   try {
     const data = fs.readFileSync(BUDGETS_FILE, 'utf8');
     return JSON.parse(data);
-  } catch (error) {
+  } catch {
     return [];
   }
 }

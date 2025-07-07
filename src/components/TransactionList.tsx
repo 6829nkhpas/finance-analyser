@@ -27,7 +27,7 @@ import {
   formatCurrency,
   formatDate,
 } from "@/lib/utils";
-import { Edit, Trash2, DollarSign, Calendar, Tag } from "lucide-react";
+import { Edit, Trash2, DollarSign, Calendar } from "lucide-react";
 
 interface TransactionListProps {
   transactions: Transaction[];

@@ -42,7 +42,7 @@ export function getMonthName(monthString: string): string {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
 }
 
-export function getTransactionsByMonth(transactions: any[], month: string) {
+export function getTransactionsByMonth(transactions: Array<{ date: string }>, month: string) {
   return transactions.filter(transaction => {
     const transactionDate = new Date(transaction.date);
     const transactionMonth = `${transactionDate.getFullYear()}-${String(transactionDate.getMonth() + 1).padStart(2, '0')}`;
@@ -50,7 +50,7 @@ export function getTransactionsByMonth(transactions: any[], month: string) {
   });
 }
 
-export function getCategoryTotals(transactions: any[]) {
+export function getCategoryTotals(transactions: Array<{ category: string; amount: number }>) {
   const totals: Record<string, number> = {};
   categories.forEach(category => {
     totals[category] = 0;

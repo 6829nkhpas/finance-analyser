@@ -141,7 +141,16 @@ export default function TransactionForm({ onSuccess }: TransactionFormProps) {
             <Label htmlFor="category">Category</Label>
             <Select
               onValueChange={(value: string) =>
-                setValue("category", value as any)
+                setValue(
+                  "category",
+                  value as
+                    | "Food"
+                    | "Rent"
+                    | "Travel"
+                    | "Shopping"
+                    | "Bills"
+                    | "Other"
+                )
               }
               defaultValue="Other"
             >
