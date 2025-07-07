@@ -73,24 +73,24 @@ export default function DashboardPage() {
   return (
     <div className="container mx-auto px-4 py-8 space-y-8 relative">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-pink-200/30 to-blue-200/30 rounded-full blur-3xl -z-10" />
       
       {/* Header */}
       <div className="text-center space-y-4 relative">
-        <div className="inline-block p-4 rounded-2xl bg-gradient-primary shadow-xl float mb-4">
+        <div className="inline-block p-4 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 shadow-xl float mb-4">
           <span className="text-4xl">💰</span>
         </div>
         <h1 className="text-5xl font-bold gradient-text mb-4">
           Personal Finance Visualizer
         </h1>
-        <p className="text-muted-foreground text-xl max-w-2xl mx-auto text-balance">
+        <p className="text-gray-600 text-xl max-w-2xl mx-auto">
           Track your expenses, set budgets, and visualize your financial health with beautiful insights
         </p>
         <div className="flex justify-center gap-2 mt-6">
-          <div className="w-16 h-1 bg-gradient-primary rounded-full" />
-          <div className="w-8 h-1 bg-primary/40 rounded-full" />
-          <div className="w-4 h-1 bg-primary/20 rounded-full" />
+          <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full" />
+          <div className="w-8 h-1 bg-purple-400 rounded-full" />
+          <div className="w-4 h-1 bg-purple-300 rounded-full" />
         </div>
       </div>
 

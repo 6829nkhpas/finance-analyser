@@ -1,5 +1,14 @@
 [
   {
+    "amount": 78,
+    "date": "2025-07-06",
+    "description": "choclate",
+    "category": "Other",
+    "_id": "1751764823757c4sar1xxb",
+    "createdAt": "2025-07-06T01:20:23.757Z",
+    "updatedAt": "2025-07-06T01:20:23.757Z"
+  },
+  {
     "_id": "1701234567890abc123",
     "amount": 45.5,
     "date": "2024-12-15",
