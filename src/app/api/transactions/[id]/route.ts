@@ -3,12 +3,13 @@ import { updateTransaction, deleteTransaction } from '@/lib/localDb';
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await context.params;
   try {
     const body = await request.json();
     
-    const transaction = updateTransaction(params.id, {
+    const transaction = updateTransaction(id, {
       amount: body.amount,
       date: body.date,
       description: body.description,
@@ -28,10 +29,11 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await context.params;
   try {
-    const success = deleteTransaction(params.id);
+    const success = deleteTransaction(id);
     
     if (!success) {
       return NextResponse.json({ error: 'Transaction not found' }, { status: 404 });

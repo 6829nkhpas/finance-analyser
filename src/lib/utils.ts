@@ -42,7 +42,7 @@ export function getMonthName(monthString: string): string {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
 }
 
-export function getTransactionsByMonth(transactions: Array<{ date: string }>, month: string) {
+export function getTransactionsByMonth<T extends { date: string }>(transactions: T[], month: string): T[] {
   return transactions.filter(transaction => {
     const transactionDate = new Date(transaction.date);
     const transactionMonth = `${transactionDate.getFullYear()}-${String(transactionDate.getMonth() + 1).padStart(2, '0')}`;
